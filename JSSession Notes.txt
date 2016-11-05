@@ -1,0 +1,1324 @@
+
+Being UI Developer the below skills are added advantage for your resume weightage
+and ur career
+====================================================================================
+W3C VALIDATORS - HTML,CSS
+W3C Web Accessibility 
+ 
+Knowing Project Requirements
+============================
+Realtime senarios - Project structure
+User Stories, Functional Specificaiton Document
+
+JS Overview 
+===========
+JS Introduction
+Why we are using JS
+What are the different benifits/feautures of JS
+JS Basics
+API - Application Programming Interface
+
+Prerequisities required to learn JS
+===================================
+HTML
+CSS
+
+JS Basics
+=========
+JavaScript Engine. That will recognize whether our written code is in standard syntax or not.
+If it is fine then it will execute the statements line by line otherwise it will terminate function lines of code where that error occurs.
+
+1) Syntax - JS is case sensitive that means variables declaration, function declarations. small letters, capital  letters and camel cases. variables are declared first letter as small letter
+_(); ID = _protocall()$MaddCall  
+2) Comments: We have two types of comments when we are going to write js code.
+a. single line comments //
+b. block level comments/*
+			dsadlkkjaldkaldajdkjasljsaflkdjsalfjaslkd
+			ddlksajdlsajfldkas
+			*/
+
+3) Variables: var a (Defining) and declaring the value to variable a is
+  a=10; Number
+  var s = "sravani"; // string
+  var m = "sriram"; // string
+   s='sravani1'
+   m='sriram';
+  var b = true; //boolean
+  var n = null; //object
+  undefined
+ if() conditional statement;
+document.getElementById();
+document.getElementsByClassName();
+document.getElemetsByTagName();
+
+Reserved Keywords:
+----------------- 
+
+4) Operators: Arthematic, increment and decremental operators, logical operators, bitwise operators.
+Arthmatic: +,-,*,%,postfix increment and prefix incremental operators as ++a,a++ --a,a--, &&,||,!Not, =,!=,==,===,<<,>>,
+
+a = 10;
+b = "10";
+if(a === b) //false
+5) Scopes -Local scope and Global Scope - public, private, protected, var a, a=10;
+1. JS can change HTML Element using document.getElementById("demo").innerHTML;
+2. JS can change HTML Attributes using document.getElementById("demo").src =""
+3. JS can change HTML Style using document.getElementById("demo").style.fontSize = "14px"
+   document.getElementById("demo").style.backgroundColor = "14px"
+4. JS can show HTML elements using document.getElementById("demo").style.display = "block"; //Show elements
+5. JS can hide HTML elementes using document.getElementById("demo").style.display = "none" //Hide elements
+display:none; 
+visibility:hidden andc	 
+display:block; 
+visisbility: visibile;
+HTML mockup will gives up differnt identification to fetch the elements.
+elements, atrributes, classes, id's
+JS Hoisting:-  In JS, a variable can be declared after it has been used. or else
+-----------
+In JS , a variable can be used before it has been declared.
+var x; // Declaring var x
+x = 10; //Assign 10 to x
+elem = document.getElementById("demo"); // find an element in html mockup
+elem.innerHTML = x;
+Javascript only hoists declarations, not initializations.
+In JavaScript we can able to create function in 3 ways
+======================================================
+1. Normal function execution funName(){} called Named Function 
+var foo = function bar(){
+ return 12;
+typeOf bar;
+}
+2. Self Executing Functions (function(){})();
+3. Anonymous Functions - return function(x){return function(z)}
+Clousers:-
+--------
+2. What is a “closure” in JavaScript? Provide an example
+
+A closure is a function defined inside another function 
+(called the parent function),
+ and has access to variables that are declared and defined in the parent function scope.
+
+The closure has access to variables in three scopes:
+Variables declared in their own scope
+Variables declared in a parent function scope
+Variables declared in the global namespace
+var x; 
+function calArea(){
+   return x * x;
+}
+var globalVar = "abc"; 
+// Parent self invoking function 
+(function outerFunction (outerArg) { // begin of scope outerFunction
+    // Variable declared in outerFunction function scope 
+    var outerFuncVar = 'x';    
+    // Closure self-invoking function 
+    (function innerFunction (innerArg) { // begin of scope innerFunction
+        // variable declared in innerFunction function scope
+        var innerFuncVar = "y"; 
+        console.log(          
+            "outerArg = " + outerArg + "\n" +
+            "outerFuncVar = " + outerFuncVar + "\n" +
+            "innerArg = " + innerArg + "\n" +
+            "innerFuncVar = " + innerFuncVar + "\n" +
+            "globalVar = " + globalVar);
+
+    }// end of scope innerFunction)(5); // Pass 5 as parameter 
+}// end of scope outerFunction )(7); // Pass 7 as parameter 
+innerFunction is closure that is defined inside outerFunction and has access to all variables declared and defined in the outerFunction scope. In addition, the function defined inside another function as a closure will have access to variables declared in the global namespace.
+
+Thus, the output of the code above would be:
+
+outerArg = 7
+outerFuncVar = x
+innerArg = 5
+innerFuncVar = y
+globalVar = abc
+
+Write a mul function which will produce the following outputs when invoked:
+
+javascript console.log(mul(2)(3)(4)); // output : 24 console.log(mul(4)(3)(4)); // output : 48
+
+Below is the answer followed by an explanation to how it works:
+function mul (x) {
+    return function (y) { // anonymous function 
+        return function (z) { // anonymous function 
+            return x * y * z; 
+        };
+    };
+}
+
+In JavaScript, a function defined inside another one has access to the 
+outer function's variables.
+Therefore, a function is a first-class object that can be returned by 
+other functions as well and be passed as an argument in another function.
+
+A function is an instance of the Object type
+A function can have properties and has a link back to its constructor method
+A function can be stored as a variable
+A function can be pass as a parameter to another function
+A function can be returned from another function
+
+How to empty an array in JavaScript ?
+
+var arrayList =  ['a','b','c','d','e','f'];
+Method 1:
+arrayList = []
+var arrayList = ['a','b','c','d','e','f']; // Created array 
+var anotherArrayList = arrayList;  // Referenced arrayList by another variable 
+arrayList = []; // Empty the array 
+console.log(anotherArrayList); // Output ['a','b','c','d','e','f']
+
+Method 2:
+arrayList.length = 0;
+
+The code above will clear the existing array by setting its length to 0. This way of emptying the array also updates all the reference variables that point to the original array. Therefore, this method is useful when you want to update all reference variables pointing to arrayList.
+
+var arrayList = ['a','b','c','d','e','f']; // Created array 
+var anotherArrayList = arrayList;  // Referenced arrayList by another variable 
+arrayList.length = 0; // Empty the array by setting length to 0
+console.log(anotherArrayList); // Output []
+
+Method 3:
+arrayList.splice(0, arrayList.length);
+
+The implementation above will also work perfectly. This way of emptying the array will also update all the references to the original array.
+
+var arrayList = ['a','b','c','d','e','f']; // Created array 
+var anotherArrayList = arrayList;  // Referenced arrayList by another variable 
+arrayList.splice(0, arrayList.length); // Empty the array by setting length to 0
+console.log(anotherArrayList); // Output []
+
+Method 4:
+while(arrayList.length){
+    arrayList.pop();
+}
+The implementation above can also empty arrays, but it is usually not recommended to use this method often.
+
+
+How do you check if an object is an array or not?
+.call() and .apply() - differences.
+
+The best way to find out whether or not an object is an instance of a particular class is to use
+the toString method from Object.prototype:
+ var arrayList = [1,2,3];
+One of the best use cases of type-checking an object is when we do method overloading in JavaScript. For example, let's say we have a method called greet, which takes one single string and also a list of strings. To make our greet method workable in both situations, we need to know what kind of parameter is being passed. Is it a single value or a list of values?
+
+function greet(param){
+     if(){ // here have to check whether param is array or not 
+     }else{
+
+     }
+ }
+
+
+function greet(param){
+     if(typeof param === 'string'){ 
+     }else{
+       // If param is of type array then this block of code would execute
+     }
+ }
+Now it's fine we can go with either of the aforementioned two implementations, but when we have a situation where the parameter can be single value, array, and object type, we will be in trouble.
+
+Coming back to checking the type of an object, as mentioned previously we can use Object.prototype.toString
+Object.prototype.toString.call(arrayList) === "[Object Array]"
+
+If you are using jQuery, then you can also use the jQuery isArray method
+ if($.isArray(arrayList)){
+    console.log('Array');
+  }else{
+      console.log('Not an array');
+  }
+
+FYI, jQuery uses Object.prototype.toString.call internally to check whether an object is an array or not.
+
+
+if( Object.prototype.toString.call( arrayList ) === '[object Array]' ) {
+    console.log('Array!');
+}
+In modern browsers, you can also use
+Array.isArray(arrayList)
+Array.isArray is supported by Chrome 5, Firefox 4.0, IE 9, Opera 10.5 and Safari 5
+
+What will be the output of the following code?
+var output = (function(x){
+    delete x;
+    return x;
+  })(0);
+
+  console.log(output);
+The output would be 0. The delete operator is used to delete properties from an object. Here x is not an object but a local variable. delete operators don't affect local variables.
+
+What will be the output of the code below?
+var x = { foo : 1};
+var output = (function(){
+    delete x.foo;
+    return x.foo;
+  })();
+
+  console.log(output);
+The output would be undefined. The delete operator is used to delete the property of an object. Here, x is an object which has the property foo, and as it is a self-invoking function, we will delete the foo property from object x. After doing so, when we try to reference a deleted property foo, the result isundefined.
+
+What will be the output of the code below?
+var Employee = {
+  company: 'xyz'
+}
+var emp1 = Object.create(Employee);
+delete emp1.company
+console.log(emp1.company);
+
+The output would be xyz. Here, emp1 object has company as its prototype property. The delete operator doesn't delete prototype property.
+
+What is undefined x 1 in JavaScript?
+var trees = ["redwood","bay","cedar","oak","maple"];
+delete trees[3];
+
+When you run the code above and type console.log(trees); into your Chrome developer console, you will get ["redwood", "bay", "cedar", undefined × 1, "maple"]. When you run the code in Firefox's browser console, you will get ["redwood", "bay", "cedar", undefined, "maple"]. Thus, it's clear that the Chrome browser has its own way of displaying uninitialised indexes in arrays. However, when you check trees[3] === undefined in both browsers, you will get similar output as true.
+
+What will be the output of the code below?
+var trees = ["xyz","xxxx","test","ryan","apple"];
+delete trees[3];
+
+  console.log(trees.length);
+The output would be 5. When we use the delete operator to delete an array element, the array length is not affected from this. This holds even if you deleted all elements of an array using the delete operator.
+In other words, when the delete operator removes an array element, that deleted element is not longer present in array. In place of value at deleted index undefined x 1 in chrome and undefined is placed at the index. If you do console.log(trees) output ["xyz", "xxxx", "test", undefined × 1, "apple"] in Chrome and in Firefox ["xyz", "xxxx", "test", undefined, "apple"].
+
+What will be the output of the code below?
+var bar = true;
+console.log(bar + 0);   
+console.log(bar + "xyz");  
+console.log(bar + true);  
+console.log(bar + false);
+1
+ truexyz
+ 2 1
+
+The code will output 1, "truexyz", 2, 1. Here's a general guideline for addition operators
+
+Number + Number -> Addition
+Boolean + Number -> Addition
+Boolean + Number -> Addition
+Number + String -> Concatenation
+String + Boolean -> Concatenation
+String + String -> Concatenation
+
+What will be the output of the code below?
+var z = 1, y = z = typeof y;
+console.log(y); 
+
+The output would be undefined. According to the associativity rule, operators with the same precedence are processed based on the associativity property of the operator. Here, the associativity of the assignment operator is Right to Left, so typeof y will evaluate first , which is undefined. It will be assigned to z, and then y would be assigned the value of z and then z would be assigned the value 1.
+
+What will be the output of the code below?
+// NFE (Named Function Expression 
+ var foo = function bar(){ return 12; };
+ typeof bar();
+The output would be Reference Error. To make the code above work, you can re-write it as follows:
+var bar = function(){ return 12; };
+ typeof bar(); 
+function bar(){ return 12; };
+ typeof bar(); 
+function bar(){ return 12; };
+ typeof bar(); 
+A function definition can have only one reference variable as its function name. In sample 1, bar's reference variable points to anonymous function. In sample 2, the function's definition is the name function.
+
+What is the difference between the function declarations below?
+var foo = function(){ 
+    // Some code
+ }; 
+function bar(){ 
+    // Some code
+ }; 
+
+The main difference is the function foo is defined at run-time whereas function bar is defined at parse time. To understand this in better way, let's take a look at the code below:
+
+Run-Time function declaration 
+<script>
+foo(); // Calling foo function here will give an Error
+ var foo = function(){ 
+        console.log("Hi I am inside Foo");
+ }; 
+ </script>
+<script>
+Parse-Time function declaration 
+bar(); // Calling foo function will not give an Error
+ function bar(){ 
+    console.log("Hi I am inside Foo");
+ }; 
+ </script>
+
+Another advantage of this first-one way of declaration is that you can declare functions based on certain conditions. For example:
+<script>
+if(testCondition) {// If testCondition is true then 
+     var foo = function(){ 
+        console.log("inside Foo with testCondition True value");
+     }; 
+ }else{
+      var foo = function(){ 
+        console.log("inside Foo with testCondition false value");
+     }; 
+ }
+ </script>
+
+However, if you try to run similar code using the format below, you'd get an error:
+<script>
+if(testCondition) {// If testCondition is true then 
+     function foo(){ 
+        console.log("inside Foo with testCondition True value");
+     }; 
+ }else{
+      function foo(){ 
+        console.log("inside Foo with testCondition false value");
+     }; 
+ }
+ </script>
+
+What is function hoisting in JavaScript?
+var foo = function foo(){ 
+     return 12; 
+ }; 
+In JavaScript, variable and functions are hoisted. Let's take function hoisting first. Basically, the JavaScript interpreter looks ahead to find all variable declarations and then hoists them to the top of the function where they're declared. For example:
+foo(); // Here foo is still undefined 
+ var foo = function foo(){ 
+     return 12; 
+ }; 
+Behind the scene of the code above looks like this:
+
+javascript var foo = undefined; foo(); // Here foo is undefined foo = function foo(){ / Some code stuff } javascript var foo = undefined; foo = function foo(){ / Some code stuff } foo(); // Now foo is defined here
+var salary = "1000$";
+
+ (function () {
+     console.log("Original salary was " + salary);
+
+     var salary = "5000$";
+
+     console.log("My New Salary " + salary);
+ })();
+The output would be undefined, 5000$. Newbies often get tricked by JavaScript's hoisting concept. In the code above, you might be expecting salary to retain its value from the outer scope until the point that salary gets re-declared in the inner scope. However, due to hoisting, the salary value was undefined instead. To understand this better, have a look of the code below:
+
+var salary = "1000$";
+
+ (function () {
+     var salary = undefined;
+     console.log("Original salary was " + salary);
+
+     salary = "5000$";
+
+     console.log("My New Salary " + salary);
+ })();
+var salary = "1000$";
+
+ (function () {
+     var salary = undefined;
+     console.log("Original salary was " + salary);
+
+     salary = "5000$";
+
+     console.log("My New Salary " + salary);
+ })();
+salary variable is hoisted and declared at the top in the function's scope. The console.log inside returns undefined. After the console.log, salary is redeclared and assigned 5000$.
+
+Question 20
+What is the instanceof operator in JavaScript? What would be the output of the code below?
+function foo(){ 
+    return foo; 
+}
+new foo() instanceof foo;
+Here, instanceof operator checks the current object and returns true if the object is of the specified type.
+For Example:
+
+ var dog = new Animal();
+ dog instanceof Animal // Output : true
+Here dog instanceof Animal is true since dog inherits from Animal.prototype.
+var name = new String("xyz");
+ name instanceof String // Output : true
+
+Question 21
+
+If we have a JavaScript associative array
+
+  var counterArray = {
+           A : 3,
+           B : 4
+  };
+
+counterArray["C"] = 1;
+How can we calculate the length of the above associative array's counterArray?
+There are no in-built functions and properties available to calculate the length of associative array object here. However, there are other ways by which we can calculate the length of an associative array object. In addition to this, we can also extend an Object by adding a method or property to the prototype in order to calculate length. However, extending an object might break enumeration in various libraries or might create cross-browser issues, so it's not recommended unless it's necessary. Again, there are various ways by which we can calculate length.
+Object has the keys method which can be used to calculate the length of an object:
+Object.keys(counterArray).length // Output 3 
+
+We can also calculate the length of an object by iterating through an object and by counting the object's own property.
+
+function getSize(object){
+    var count = 0;
+    for(key in object){
+      // hasOwnProperty method check own property of object
+      if(object.hasOwnProperty(key)) count++;
+    }
+    return count;
+}
+
+Object.length = function(){
+      var count = 0;
+    for(key in object){
+      // hasOwnProperty method check own property of object
+      if(object.hasOwnProperty(key)) count++;
+    }
+    return count;
+  }
+  //Get the size of any object using
+  console.log(Object.length(counterArray))
+
+
+
+
+
+
+Display Possibilities:
+---------------------
+in JS we are going to display content is 4 ways.
+1. window.alert("");
+2.document.write("");
+3.innerHTML("Content displaying");
+<div id="innerText">DKJALDJAJDFLASDJLKASJFDLKAJFDLAKFJLKDJSALK</div>
+ document.getElementById("innerText").innerHTML = "SOME TEXT OF PARTICULAR DIV" .innerText() // It will fetch existing content for that div element.
+4. console.log();
+window.confirm();
+window.prompt();
+window.alert();
+
+6) Functions / Methods :
+Function: -- 
+1.Syntax of function
+2.Different types of function calling in our code
+3.Why we are using functions :-
+
+Code reusability - in technical terminology.
+
+CODE REVIEW SESSIONS:- Application Build - Deployed in one server, server generally hosts/located in client location CR(Change Requests)
+Reusing code/reusability is more
+
+Syntax:-
+function displayName()
+{
+}
+function invocation/function calling/function exectuting in one particular line of statement.
+
+Parameters/Arguments:- What ever the function we r going to implement that are having some paraments that may be 1,2,3 or more that depends on requirement
+What we called it as if my function doesn't have any parameters or args. -- Default Function with no arguments.
+
+OOPS (Object Oriented Programming Concepts):-
+
+1.Data Abstraction 2.Data Encapsulation 3.Inheritance 4.Polymorphism 5.Objects 6.Constructors.
+
+Abstraction:- displayName()/Interface
+ATM : CashWidrawal(); BalanceEnquiry(); Ministatement(); FastWithdrawl(); accountInfor();
+Data Encapsulation:
+
+Capsules:-we can see general medicine capusule in two ways one side having one medicine and another side having another medicine finally both are 
+encapsulating to give a Capsules.
+
+Binding the data/properties and methods together and it will gives functionality
+
+Inheritance:- Single Inheritance, Multi Level Inheritance, Hybrid Inheritance
+
+Acquiring the properties from parent/base class to child class is called it as inheritance.
+
+Polymorphism:
+------------
+class called it as Shape/Fruit
+-------------------------------
+circle, rectange, squere, cube
+Apple, Orange, Grapes
+
+function sum(a,b){
+	return a+b;
+}
+
+Two types of polymorphisms we have a) Runtime Polymorphism
+				   b) Compile time polymorphism
+
+Function Overloading:
+functon sum(float a, float b,float c){
+
+}
+JS:- 
+function sum(a,b,c){
+
+}
+function sum(a,b,c,d){
+
+}
+sum(10,20,30)
+how you can recognize that how many parameters that you are passing to different functions
+1. I want length parameters that you are going to pass in function
+2. What is the value of first parameter that I already passed in my function
+
+Function Overriding:-
+overriding:- abc(); abc(); 
+----------
+Function Overriding
+ parent and child relationship. 
+class Animal{
+
+7) Objects
+JavaScript Objects:-
+In JS everything is in object.
+DataType : -  Number, Boolean, String, Array, undefined, Object, Function and Null
+var a =10 // a is typeOf number
+var b = true // b is typeOf boolean
+var c = "sriram"; // c is typeOf String
+var c=undefined; // c is typeOf Object
+var arr = [1,2,3,4]; // arr is typeOf Object
+var n = null
+var n = ""; 
+var jsObj = 
+
+var person = {
+              name:"Sravani",
+	      age:22,
+	      department:"HR/IT",
+	      address:{
+		     doorNo:"#3-43/A/B",
+                     StreetName: "Gangaram",
+                     City: "Hyderabad",
+                     State:"TELANGANA",
+                     pincode:500050	
+		},
+              array:["sriram","sravani","subhani"],
+	      company:"Infosys Limited"		
+}
+
+In How many way can I create an Object in JS? What are those ?
+2 ways / 3 ways
+1. By using object 
+var emp = new person();
+emp.name = "Sravani";
+emp.age = 22;
+emp.address = "";
+emp.department = "HR/IT"
+
+
+The "use strict" directive. which means your JavaScript code is running in strict mode.
+new version in js 1.8.5 (ECMA Script 5) onwards.
+->It is not a statement, but a literal expression ignored by earlier version of js. 
+-> The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+
+-> With strict mode, you cannot use undeclared variables.
+Strict mode is supported in : IE 10 version onwards, firefox from version 4 onwards,
+chrome from version 13 onwards, safari from version 5.1 onwards and Opera from version 12 onwards,
+
+-> Strict mode is declared by adding "use strict" to the beggining of a script or function of your file.
+it has global scope(all code in the script will execute in strict mode).
+
+delete operator:-
+--------------
+->The delete operator is designed to be used on object properties. It has no effect on variables or functions.
+-> The delete operator should not be used on predefined JS Object properties. If it is used then, it can crush you application.
+
+8) Strings:
+===========
+JS Group of characters put together in one variable reference is called String.
+ex:
+var s = "Hi, Good Morning All";
+var s1 = "Hello";
+
+var x = new String("John");             
+var y = new String("John");
+
+// (x == y) is false because x and y are different objects
+// (x == x) is true because both are the same object
+
+indexOf()
+=========
+The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+
+var str = "Please locate where 'locate' occurs!";
+7 21
+var pos = str.indexOf("locate"); 
+
+console.log(pos);
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate"); 
+
+The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate"); 
+
+Difference between indexOf() and search() methods:
+-------------------------------------------------
+The two methods, indexOf() and search(), are equal
+They accept the same arguments (parameters), and they return the same value.
+The two methods are equal, but the search() method can take much more powerful search values.
+You will learn more about powerful search values in the chapter about regular expressions.
+
+The search() method searches a string for a specified value and returns the position of the match:
+
+Extracting String in different ways:
+===================================
+a) slice(start,end);
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7,19);  //here start and end are the index position values that we are passing as arguments to slice method.
+b) substring(start,end);
+substring() is similar to slice().
+The difference is that substring() cannot accept negative indexes
+  In substring(), we can't give negative values inside method as arguments. The second paremeter is not mandatory. If I don't enter any second parameter values
+It will show the entire string from the starting index value of that string.
+
+Negative positions do not work in Internet Explorer 8 and earlier.
+Browser Compatibility -  we came across they different bugs/issues. Then we have to fix them properly w.r.t specific browsers.
+======================
+ 
+c) substr(str,length);
+
+substr() is similar to slice().
+The difference is that the second parameter specifies the length of the extracted part.
+It is like similar to slice() method.
+It won't accept negative values as parameters in that substr() method. The length parameter is here optional. If we pass length parament as "0" value it won't
+display any string.  
+
+d) replace():
+============
+The replace() method replaces a specified value with another value in a string:
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft","W3Schools");
+The replace() method can also take a regular expression as the search value.
+By default, the replace() function replaces only the first match. To replace all matches, use a regular expression with a g flag (for global match):
+
+Replace All: -  In javascript we can find specified matching text and then we can replace that text with our custom text in all the occurences.
+example:str = "Please visit Microsoft!";
+var n = str.replace(/Microsoft/g,"W3Schools");
+here "/g" is called as regular expression. It gives us the replace all feature in a string.
+e)toLowerCase();
+	var text1 = "Hello World!";       // String
+var text2 = text1.toLowerCase();  // text2 is text1 converted to lower 
+f)toUpperCase();
+var text1 = "Hello World!";       // String
+var text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+g)concat():-
+var text1 = "Hello";
+var text2 = "World";var s1="abc";var s2="xyz";
+text3 = text1.concat(" ",text2,s1,s2);
+"Hello Worldabcxyz"
+var text1 = "Hello";
+var text2 = "World";var s1="abc";var s2="xyz";
+text3 = text1.concat(" ",text2," ",s1," ",s2);
+"Hello World abc xyz"
+
+All string methods return a new string. They don't modify the original string.
+Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+
+
+h)charAt():- charAt() will returns us a specified index (position) in a string.
+var str = "Hello World!";
+var ch = charAt(0); //returns H.
+i) The charCodeAt() Method:
+The charCodeAt() method returns the unicode of the character at a specified index in a string:
+var str = "HELLO WORLD";
+
+str.charCodeAt(0);         
+72
+var str = "@HELLO WORLD";
+
+str.charCodeAt(0);         
+64
+Accessing a String as an Array is Unsafe
+=======================================
+var str = "HELLO WORLD";
+
+str[0];                   // returns H 
+This is unsafe and unpredictable: 
+It does not work in all browsers (not in IE5, IE6, IE7)
+It makes strings look like arrays (but they are not)
+str[0] = "H" does not give an error (but does not work) 
+If you want to read a string as an array, convert it to an array first.
+Converting a String to an Array
+===============================
+A string can be converted to an array with the split() method
+Q: How to convert string as an array in javascript ?
+
+var str = "a,b,c,d,e,f";
+    var arr = str.split(",");
+undefined
+console.log(arr);
+VM387:1 ["a", "b", "c", "d", "e", "f"]0: "a"1: "b"2: "c"3: "d"4: "e"5: "f"length: 6__proto__: Array[0]
+undefined
+typeof arr;
+"object"
+
+RegularExpressions 
+==================
+9) Arrays
+
+Array:- Array is set of characters, strings or similar datatypes or different data types stored together in a variable is called "Array".
+
+var myList = ["Apples","Oranges","Bananas"];
+
+var myList1 = ["Apples",100,200,"Bananas","Oranges"]
+
+myList[0] // Apples,
+myList[1] // Oranges
+myList[2] //Bananas
+myList[3] //undefined
+
+How to add new items to my existing array called "myList"
+
+myList[3] = "Watermelon";
+
+How to find the length of new array called "myList"
+myList.length // 4
+myList2 = ["Apples","Oranges",12,14.5,go];
+VM632:1 Uncaught ReferenceError: go is not defined(…)(anonymous function) @ VM632:1
+function go(){console.log("Hello,Good Morning");}
+undefined
+go();
+VM657:1 Hello,Good Morning
+undefined
+go;
+go(){console.log("Hello,Good Morning");}
+myList2 = ["Apples","Oranges",12,14.5,go];
+["Apples", "Oranges", 12, 14.5, go()]
+myList2[4]
+go(){console.log("Hello,Good Morning");}
+myList2[4]();
+VM657:1 Hello,Good Morning
+myList3 = ["Apples","Bananas","Watermelon",["100","200","Hello JavaScript"]];
+["Apples", "Bananas", "Watermelon", Array[3]0: "100"1: "200"2: "Hello JavaScript"length: 3__proto__: Array[0]]
+myList3 = ["Apples","Bananas","Watermelon",[100,200,"Hello JavaScript"]];
+["Apples", "Bananas", "Watermelon", Array[3]0: 1001: 2002: "Hello JavaScript"length: 3__proto__: Array[0]]
+myList3[][3]
+VM744:1 Uncaught SyntaxError: Unexpected token ]
+myList3[3]
+[100, 200, "Hello JavaScript"]
+myList3[3][2]
+"Hello JavaScript"
+
+myList3 = ["Apples","Bananas","Watermelon",["100","200","Hello JavaScript"]]
+["Apples", "Bananas", "Watermelon", Array[3]]
+myList.shift();
+VM120:1 Uncaught ReferenceError: myList is not defined(…)(anonymous function) @ VM120:1
+myList3.shift();
+"Apples"
+myList3
+["Bananas", "Watermelon", Array[3]0: "100"1: "200"2: "Hello JavaScript"length: 3__proto__: Array[0]]
+
+
+push: the new element are going to be push/added in the existing array// FIFO 
+pop: deletes the element from the existing array // LIFO 
+
+myList3.length
+5
+myList3[3];
+undefined
+myList3[3].pop();
+VM411:1 Uncaught TypeError: Cannot read property 'pop' of undefined(…)(anonymous function) @ VM411:1
+myList3.pop();
+"Watermelon"
+myList3
+["Apples", "Oranges", Array[3], undefined × 1]
+myList3.pop();
+undefined
+myList3
+["Apples", "Oranges", Array[3]]
+myList3.shift();
+"Apples"
+myList3;
+["Oranges", Array[3]]
+
+differences between shift() and pop() methods in array:
+========================================================
+shift() and pop() will removes an element from an existing array. The difference is that
+pop() will removes an element from an array in LastInFirstOut fashion. LIFO
+where as shift() will removes an element from an array in FirstInFirstOut fashion FIFO.
+
+var myList = ["Apples","Oranges","Bananas"];
+
+myList.forEach(function(value,index){
+	console.log("I have a fruit name" + value + "in my shopping cart");
+});
+var myList = ["Apples","Oranges","Bananas"];
+
+myList.forEach(function(value,index){
+	console.log("I have a fruit name " + value + " in my shopping cart");
+});
+VM549:4 I have a fruit name Apples in my shopping cart
+VM549:4 I have a fruit name Oranges in my shopping cart
+VM549:4 I have a fruit name Bananas in my shopping cart
+
+Loops:
+=====
+1) while(condition) 
+2) do{}while(condition)
+3) for(variable declaration;condition;increment/decremet);
+
+while:---
+=======
+                var times = 0;
+		while(times < 10){
+			console.log("I tried it "+ times);
+			times = times + 1;	
+		}
+var times = 0;
+		while(times < 10){
+			console.log("I tried it "+ times);
+			times = times + 1;	
+		}
+VM552:3 I tried it 0
+VM552:3 I tried it 1
+VM552:3 I tried it 2
+VM552:3 I tried it 3
+VM552:3 I tried it 4
+VM552:3 I tried it 5
+VM552:3 I tried it 6
+VM552:3 I tried it 7
+VM552:3 I tried it 8
+VM552:3 I tried it 9
+
+do.. while():-
+============
+		do{
+			console.log("I tried it "+ times);
+			times = times+1;
+		}while(times < 10);
+var times1 = 0; do{
+			console.log("I tried it "+ times1);
+			times1 = times1+1;
+		}while(times1 < 10);
+
+VM572:2 I tried it 0
+VM572:2 I tried it 1
+VM572:2 I tried it 2
+VM572:2 I tried it 3
+VM572:2 I tried it 4
+VM572:2 I tried it 5
+VM572:2 I tried it 6
+VM572:2 I tried it 7
+VM572:2 I tried it 8
+VM572:2 I tried it 9
+10
+
+for( ; ;):-
+==========
+syntax of for(setup,comparision, change)
+==========================================
+
+for(var i=0; i<10; i++){
+	console.log("i is ", i);
+}
+for(var i=0; i<10; i++){
+	console.log("i is ", i);
+}
+
+VM575:2 i is  0
+VM575:2 i is  1
+VM575:2 i is  2
+VM575:2 i is  3
+VM575:2 i is  4
+VM575:2 i is  5
+VM575:2 i is  6
+VM575:2 i is  7
+VM575:2 i is  8
+VM575:2 i is  9
+
+var myList = ["Apples","Oranges","Bananas","Watermelon"]
+undefined
+myList
+["Apples", "Oranges", "Bananas", "Watermelon"]
+for(var j=0; j<myList.length; j++){ console.log(myList[j])}
+VM751:1 Apples
+VM751:1 Oranges
+VM751:1 Bananas
+VM751:1 Watermelon
+
+var fruits, text, fLen, i;
+
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";text += "</ul>";
+} 
+"<ul><li>Banana</li></ul><li>Orange</li></ul><li>Apple</li></ul><li>Mango</li></ul>"
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Lemon");  
+5
+fruits
+["Banana", "Orange", "Apple", "Mango", "Lemon"]
+
+push() and pop():--
+
+push() will do adding new element to the existing array list added at last index position of existing array.
+and pop() will do removing element from an existing array list i.e. LIFO
+
+shift():- It will do removing an element from an existing array from FIFO;
+
+["Banana", "Orange", "Apple", "Mango", "Lemon"]
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Lemon";     
+"Lemon"
+fruits.length
+5
+fruits
+["Banana", "Orange", "Apple", "Mango", "Lemon"]
+
+
+var points = new Array(40);       
+undefined
+points
+[undefined × 40]
+points.length
+40
+var points = new Array(40,20);       
+undefined
+points.length
+2
+
+Associative Arrays: 
+==================
+
+Arrays with named indexes are called associative arrays (or hashes).
+JavaScript does not support arrays with named indexes.
+In JavaScript, arrays always use numbered indexes.
+var person = [];
+person[0] = "John";
+person[1] = "Doe";
+person[2] = 46;
+var x = person.length;         // person.length will return 3
+var y = person[0];             // person[0] will return "John"
+
+fruits;
+["Banana", "Orange", "Apple", "Mango"]
+Array.isArray
+isArray() { [native code] }
+Array.isArray(fruits);
+true
+Array.isArray(person);
+false
+if(Array.isArray(fruits)){alert("Fruits is an array type");}
+undefined
+if(Array.isArray(person)){alert("Fruits is an array type");}
+
+
+join() and toString():
+=====================
+
+fruits;
+["Banana", "Orange", "Apple", "Mango"]
+typeof fruits
+"object"
+fruits.toString();
+"Banana,Orange,Apple,Mango"
+typeof fruits
+"object"
+fruits[0];
+"Banana"
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+undefined
+fruits.join('|');
+"Banana|Orange|Apple|Mango"
+
+push() and pop():
+=================
+fruits.push('Kiwi');
+5
+fruits;
+["Banana", "Orange", "Apple", "Mango", "Kiwi"]
+fruits.pop();
+"Kiwi"
+fruits
+["Banana", "Orange", "Apple", "Mango"]
+
+Shifting Elements in array:
+=============================
+shift():-
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+undefined
+
+fruits.shift();
+"Banana"
+fruits
+["Orange", "Apple", "Mango"]
+
+The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+["Banana", "Orange", "Apple", "Mango"]
+fruits.unshift("Lemon");
+5
+fruits;
+["Lemon", "Banana", "Orange", "Apple", "Mango"]
+fruits[0]
+"Lemon"
+
+Differences between push() and unshift():
+========================================
+push will do that the new element will be added at the end of the array elements. LIFO
+unshift will do that the new element will be added at the beginning of the existing array elements. FIFO
+
+The shift() method returns the string that was "shifted out".
+The unshift() method returns the new array length.
+
+delete operator is not used in Array instead of that you can use pop() or shift() method is recommendable.
+=======
+Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+fruits;
+["Banana", "Orange", "Apple", "Mango", "Kiwi"]
+delete fruits[3];
+true
+fruits
+["Banana", "Orange", "Apple", undefined × 1, "Kiwi"]
+fruits[3]
+undefined
+fruits.length
+5
+
+splice():
+=========
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+undefined
+
+fruits.splice(2, 0, "Lemon", "Kiwi"); 
+[]
+fruits;
+["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
+fruits.length;
+6
+The first parameter (2) defines the position where new elements should be added (spliced in).
+The second parameter (0) defines how many elements should be removed.
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+fruits.splice(2, 0, "Lemon", "Kiwi"); 
+[]
+fruits;
+["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
+fruits.length;
+6
+fruits.splice(0,1);
+["Banana"]
+fruits;
+["Orange", "Lemon", "Kiwi", "Apple", "Mango"]
+fruits.splice(2,1);
+["Kiwi"]
+fruits;
+["Orange", "Lemon", "Apple", "Mango"]
+fruits.splice(2,2);
+["Apple", "Mango"]
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+undefined
+fruits;
+["Banana", "Orange", "Apple", "Mango"]
+fruits.splice(0,3);
+["Banana", "Orange", "Apple"]
+
+
+Joining Arrays:
+===============
+var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias","Linus"];
+var myChildren = myGirls.concat(myBoys);  
+undefined
+myChildren
+["Cecilie", "Lone", "Emil", "Tobias", "Linus"]
+myChildren = myBoys.concat(myGirls);
+["Emil", "Tobias", "Linus", "Cecilie", "Lone"]
+Slice():
+=======
+The slice() method slices out a piece of an array into a new array.
+This example slices out a part of an array starting from array element 1 ("Orange"):
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1); 
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1); 
+undefined
+citrus
+["Orange", "Lemon", "Apple", "Mango"]
+fruits;
+["Banana", "Orange", "Lemon", "Apple", "Mango"]
+
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(3); 
+undefined
+citrus;
+["Apple", "Mango"]
+fruits;
+["Banana", "Orange", "Lemon", "Apple", "Mango"]
+
+The slice() method can take two arguments like slice(1,3).
+The method then selects elements from the start argument, and up to (but not including) the end argument.
+
+Ths slice() // with single argument
+If the end argument is omitted, like in the first examples, the slice() method slices out the rest of the array
+
+valueOf: JS default behaviour
+========
+The valueOf() method is the default behavior for an array. It converts an array to a primitive value.
+JavaScript will automatically convert an array to a string when a primitive value is expected
+
+All JavaScript objects have a valueOf() and a toString() method.
+
+sort():-
+=======
+var countries = ["INDIA","US","UAE","ANZ","FR","GER"]
+countries.sort();
+["ANZ", "FR", "GER", "INDIA", "UAE", "US"]
+
+var numbers = ["hdfg",10,"bcd","abc",12]
+undefined
+
+numbers;
+["hdfg", 10, "bcd", "abc", 12]
+
+numbers.sort();
+[10, 12, "abc", "bcd", "hdfg"]
+
+reverse():-
+=========
+The reverse() method reverses the elements in an array.
+numbers.reverse();
+["hdfg", "bcd", "abc", 12, 10]
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();            // Sorts the elements of fruits 
+fruits.reverse();         // Reverses the order of the elements
+
+numberSorting technique using arrays:
+====================================
+
+var points = [40, 100, 1, 5, 25, 10];
+
+points.sort(
+	function(a, b){return a - b}
+);
+
+result: 
+[1, 5, 10, 25, 40, 100]
+
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b}); 
+[1, 5, 10, 25, 40, 100]
+var points = [40, 100, 1, 5, 25, 10];
+ points.sort();
+[1, 10, 100, 25, 40, 5]
+
+Find the Highest (or Lowest) Value in Array:
+============================================
+Highest value:
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return b - a});
+
+[100, 40, 25, 10, 5, 1]
+points[0]
+100
+Lowest Value:
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+[1, 5, 10, 25, 40, 100]
+points[0]
+1
+
+Sorting Object Arrays:-
+=====================
+var cars = [
+		{type:"Volvo", year:2016},
+		{type:"Saab", year:2001},
+		{type:"BMW", year:2010}
+	   ];
+
+var cars = [
+{type:4000, year:2016},
+{type:3499, year:2001},
+{type:1200, year:2010}];
+undefined
+cars
+[Objecttype: 4000year: 2016__proto__: Object, Objecttype: 3499year: 2001__proto__: Object, Objecttype: 1200year: 2010__proto__: Object]
+cars.sort(function(a, b){return a.type - b.type});
+[Objecttype: 1200year: 2010__proto__: Object, Objecttype: 3499year: 2001__proto__: Object, Objecttype: 4000year: 2016__proto__: Object]
+cars.sort(function(a, b){return a.year - b.year});
+[Objecttype: 3499year: 2001__proto__: Object, Objecttype: 1200year: 2010__proto__: Object, Objecttype: 4000year: 2016__proto__: Object]
+
+cars
+[Objecttype: "Volvo"year: 2016__proto__: Object, Objecttype: "Saab"year: 2001__proto__: Object, Objecttype: "BMW"year: 2010__proto__: Object]
+cars.sort(function(a, b){
+        var x = a.type.toLowerCase();
+        var y = b.type.toLowerCase();
+        if (x < y) {return -1;}
+        if (x > y) {return 1;}
+        return 0;
+    });
+
+[Objecttype: "BMW"year: 2010__proto__: Object, Objecttype: "Saab"year: 2001__proto__: Object, Objecttype: "Volvo"year: 2016__proto__: Object]
+
+myList["firstNumber"] = 10
+
+
+
+
+
+
+
+
+
+
+
+
+10) OOJS (Object Oriented JavaScript)
+11) Advanced JS (like KnockOut JS, Backbone JS, ExtJS, React JS, Underscrore JS a
+and AngularJS)
+
+\a-zA-Z0-9\g
+
+This is having MVC Structure.
+
+
+
+to build web application like SPA ( SINGLE PAGE APPLICATION ) 
+
+
+EVENTS:-
+======
+onmouseover, onclick, onkeydown, onkeyup,onmouseout,onmouseleave,onmouseenter,ondblclick,onload,
+onsubmit,onfocus,onblur, onmousemove
+
+
+
+
+
+1) Login Form
+-----------
+Username :
+Password:
+
+LoginIn - button
+
+JS Requirements
+
+1) Username and Password fields should not be empty
+2) Username should allow only alphanumeric characters - abcd123, 123adbcd
+3) Password fild should contain max length of 8 characters.
+
+
+
+IDE(Integrated Development Environment)
+=======================================
+1.Java SE(Standardard Edition) software 8 latest version
+2.Apache Tomcate Server (Open source) 7,8,9 latest version
+
+
+Javascript is Object Based programming language
+-----------------------------------------------
+
+
+
+
+
+
+
+
+

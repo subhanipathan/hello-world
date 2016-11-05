@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<script type='text/javascript' src='jquery-1.11.0.min.js'></script>
+
+<script type="text/javascript">
+	function a(){
+		window.onload = alert("Hello");
+		console.log("a function executed");
+	}
+	function b(){
+		window.onload = alert("Hello1");
+		console.log("b function executed");
+	}
+	function c(){
+		window.onload = alert("Hello2");
+		console.log("c function executed");
+	}
+	function z(){
+		alert("Hello3")
+	}
+/*	(function personFun(name,age) {
+		debugger;
+    		alert(personFun('Patan',28));
+	})();
+*/	
+function personFun(name,age){
+	alert("personFun is executed and passing name is " +name+ " and age is "+age);
+	}
+// Create a helper function.
+   /* if (typeof Object.create !== 'function') { //  we can say that it is going to be 				//create one object based on specification given ECMAScript
+    Object.create = function (obj) { // here obj parameter act as object reference.
+            function fun() { };
+            fun.prototype = obj;
+            return new fun();
+        };
+    }*/
+    
+    //This is a parent class/function.
+    //<button onclick="parent.sayHi();">Submit</button>
+
+    var parent = { //Parent object 
+        sayHi: function () {
+            alert('Hi, I am parent!');
+        },// function sayHi(){ alert('Hi, I am parent!'); }
+        sayHiToWalk: function () {
+            alert('Hi, I am parent! and going to walk!');
+        },
+		add: ["subhani","pathan","mahaboob","abc"]
+    };
+   /* parent.sayHi1 = function(){
+    	alert("sayHi1 function called");
+    }*/
+
+    //This is child class and the parent class is inherited in the child class.
+    var child = Object.create(parent);
+
+    child.sayHi = function () {
+        alert('Hi, I am a child!');
+    };
+	
+    //var person1 = {firstName:"Mahaboob",lastName:"Patan",age="28",eyeColor:"blue"}
+function person(firstName,lastName,age,eyeColor) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.eyeColor = eyeColor;
+    this.changeName = function (name) {
+        this.lastName = name;
+    }
+}
+var myMother = new person("Sally","Rally",48,"green");
+myMother.changeName("Doe");
+document.getElementById("demo").innerHTML = 
+"My mother's last name is " + myMother.lastName;
+</script>
+<script type="text/javascript">
+/*	$(document).ready(function(){
+	debugger;
+		alert("JQuery Onload alert");
+	});
+
+*/</script>
+
+</head>
+<body>
+<div>
+<button type="submit" onclick="child.sayHiToWalk()"> click to oops - inheritance parent child relationship</button>
+<button type="submit" onclick="personFun('Patan',28)"> click to see values of calling function</button>
+<a href='#' onclick ='javascript:{alert(parent.add.push("def"));console.log(parent.add)}'>click</a>
+
+<script>
+/*
+More understanding about 'this' 
+(function(){
+  'use strict';
+
+  function f3(){  
+    return this;
+  }
+  f3.call(this) === window; // global object
+
+  function f4(){
+    this.herp = "derp";
+  }
+  function Thing(){
+    this.thisIsEasyToUnderstand = "just kidding";
+    f4.call(this);
+  }
+  var thing = new Thing(); // thing = { thisIsEasyToUnderstand : "just kidding", herp: "derp" };
+})();
+*/
+</script> 
+</div>
+</body>
+</html>
+
